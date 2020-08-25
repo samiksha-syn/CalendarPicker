@@ -30,6 +30,8 @@ export default function HeaderControls(props) {
     maxDate,
     minDate,
     headingLevel,
+    monthsHeaderClickable,
+    yearHeaderClickable,
     monthYearHeaderWrapperStyle,
   } = props;
   const MONTHS = months || Utils.MONTHS; // English Month Array
@@ -55,12 +57,12 @@ export default function HeaderControls(props) {
         textStyles={[styles.navButtonText, textStyle, previousTitleStyle]}
       />
       <View style={[styles.monthYearHeaderWrapper,monthYearHeaderWrapperStyle]}>
-        <TouchableOpacity onPress={onPressMonth}>
+        <TouchableOpacity onPress={monthsHeaderClickable ? onPressMonth : () => {}} >
           <Text style={[styles.monthHeaderMainText, textStyle]} {...accessibilityProps}>
             { monthName }
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={onPressYear}>
+        <TouchableOpacity onPress={yearHeaderClickable ? onPressYear : () => {}}>
           <Text style={[styles.yearHeaderMainText, textStyle]}>
             { year }
           </Text>
