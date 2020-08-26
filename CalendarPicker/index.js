@@ -322,13 +322,13 @@ export default class CalendarPicker extends Component {
 
   handleOnPressYear = () => {
     this.setState({
-      currentView: 'years'
+      currentView: 'days'
     });
   }
 
   handleOnPressMonth = () => {
     this.setState({
-      currentView: 'months'
+      currentView: 'days'
     });
   }
 
