@@ -445,9 +445,7 @@ export default class CalendarPicker extends Component {
       styles,
       monthsList,
       renderMonthParams,
-      initialScrollerIndex,
-      monthsHeaderClickable,
-      yearHeaderClickable
+      initialScrollerIndex
     } = this.state;
 
     const {
