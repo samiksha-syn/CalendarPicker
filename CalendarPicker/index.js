@@ -19,7 +19,7 @@ export default class CalendarPicker extends Component {
       currentYear: null,
       currentView: 'days',
       monthsHeaderClickable: props.monthsHeaderClickable,
-      yearHeaderClickable: props.yearHeaderClickable
+      yearHeaderClickable: props.yearHeaderClickable,
       selectedStartDate: props.selectedStartDate && moment(props.selectedStartDate),
       selectedEndDate: props.selectedEndDate && moment(props.selectedEndDate),
       minDate: props.minDate && moment(props.minDate),
@@ -541,8 +541,8 @@ export default class CalendarPicker extends Component {
             maxDate={maxDate}
             headingLevel={headingLevel}
             monthYearHeaderWrapperStyle={monthYearHeaderWrapperStyle}
-            monthsHeaderClickable: this.props.monthsHeaderClickable,
-            yearHeaderClickable: this.props.yearHeaderClickable,
+            monthsHeaderClickable={this.props.monthsHeaderClickable}
+            yearHeaderClickable={this.props.yearHeaderClickable}
           />
           <Weekdays
             styles={styles}
